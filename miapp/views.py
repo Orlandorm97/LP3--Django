@@ -25,6 +25,7 @@ def index(request):
 def saludo(request):
     return render(request, 'saludo.html')
 
+
 def rango(request):
     a=10
     b=20

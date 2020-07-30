@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+
+        <title>
+            {% block title %}
+            {% endblock %}
+            Orlando Ramos
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    </head>
+
+    <body>
+
+        <header>
+            <div id="logotipo">
+                <img src="{% static 'images/logoDjango.png' %}" />
+                <h1>
+                    Proyecto Web (LP3)
+                </h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li> 
+                    <a href="/inicio"> Inicio </a> 
+                </li>
+                <li> 
+                    <a href="/saludo"> Mensaje de saludo </a> 
+                </li>
+                <li> 
+                    <a href="/rango"> Mostrar el rango de números [a,b]</a> 
+                </li>
+                <li> 
+                    <a href="/rango2/0/27"> Mostrar el rango de números [0,27]</a> 
+                </li>
+            </ul>
+        </nav>
+
+        <div class="barra">
+            <span class="esquina-izquierda"></span> 
+            <span class="relleno-barra"></span> 
+            <span class="esquina-derecha"></span> 
+        </div>
+
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                <strong>
+                    Contenido en Layout (Padre)
+                </strong>
+                {% endblock %}
+            </div>
+        </div>
+
+        <footer>
+            UNTELS - Lenguaje de Programación III &COPY; Orlando Ramos
+        </footer>
+
+    </body>
+
+</html>
