@@ -1,12 +1,24 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-    Inicio |
+    {{titulo}}
 {% endblock %}
-    
+
 {% block content %}
+    <!-- Comentarios en HTML-->
+    <!-- Pagina Index-->
+    {% comment 'Datos de la página Index' %}
+        En esta página se mostrará la página inicial del sistema....
+    {% endcomment %}
+    <h1 class="title">Página {{titulo}}</h1>
+    <p> Usando Templates </p>
+    {% if mensaje %}
+        <p> Mensaje: {{mensaje}} </p>
+    {% else %}
+        <strong>El mensaje no tiene contenido...</strong>
+    {% endif %}
 
-<h1 class="title">Página index</h1>
-
-
-{% endblock%}
+    {% include 'listado_estudiantesregistrados.html' with encabezado="Estudiantes Registrados" %}
+    {% include 'filtros.html' with encabezado="Uso de Filtros" %}
+    <p>Año 2020 </p>
+{% endblock %}

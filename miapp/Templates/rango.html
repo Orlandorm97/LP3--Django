@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{titulo}}
+{% endblock %}
+
+{% block content %}
+
+    <h1 class="title">Página {{titulo}}</h1>
+
+        <ul>
+            {%  for numero in rango %}
+                <li> {{numero}} </li>
+            {% endfor %}
+
+        </ul>
+
+{% endblock%}
