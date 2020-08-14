@@ -26,5 +26,12 @@ urlpatterns = [
     path('rango/', views.rango, name="rango"),
     path('rango2/<int:a>/<int:b>', views.rango2, name="rango2"),
     path('rango2/', views.rango2, name="rango2"),
-    path('rango2/<int:a>', views.rango2, name="rango2")
+    path('rango2/<int:a>', views.rango2, name="rango2"),
+    path('crear-articulo/<str:titulo>/<str:contenido>/<str:publicado>', views.crear_articulo, name="crear-articulo"),
+    path('buscar-articulo/', views.buscar_articulo, name="buscar_articulo"),
+    path('editar-articulo/<int:id>', views.editar_articulo, name="editar_articulo"),
+    path('listar-articulos/', views.listar_articulos, name="listar_articulos"),
+    path('eliminar-articulo/<int:id>/', views.eliminar_articulo, name="eliminar_articulo"),
+    path('save-articulo/', views.save_articulo, name="save_articulo"),
+    path('create-articulo/', views.create_articulo, name="create_articulo"),
 ]
